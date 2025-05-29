@@ -1,0 +1,27 @@
+Step to Set Up:
+1. Make sure Node.js is installed on your device
+    i. Go to your browser and search Node js and download the windows version
+    ii. Install it (it would also install Chocolatey and some additional packages which would take a few minutes)
+
+2. Go to VS Code
+    i. Open Terminal
+    ii. Change directory to backend using "cd backend"
+    iii. type "node -v" to check if node is installed correctly
+    iv. type "npm -v"
+        a. If there is error you can try Ctrl + Shift + P and type "Terminal: Select Default Profile" and change it to Command Prompt
+        b. By default it should be PowerShell of Windows, but since it might be restricted there just change it to Cmd and it works fine
+
+3. After it is all set, we can try to establish connection to database.
+    i. We need to install some packages that we need to run Node js on the server.
+    ii. Change directory to backend (if not already in backend)
+    iii. type "npm init -y" to make sure it is working
+    iv. type "npm install express pg cors dotenv" to install the packages that we need
+        a. express: Web server
+        b. pg     : PostgreSQL driver
+        c. cors   : Allow frontend/backend communication
+        d. dotenv : Manage DataBase credentials securely
+
+4. Create an index.js file in backend 
+5. Create a index.html file in frontend to test the database connection
+6. Create an environment file in backend (.env)
+    i. This file should include the necessary credentials to establish connection to the database
