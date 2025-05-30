@@ -3,18 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sword in Stone</title>
+  <title>Sword in Stone -> OG Viewing Test</title>
 </head>
 <body>
-  <h1>Blah Blah Blah Testing</h1>
-  <button onclick="testDB()">Test DataBase</button>
+  <h1>Add a New OG</h1>
+    <form id="ogForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="number" id="score" placeholder="Score" required />
+      <button type="submit">Add OG</button>
+    </form>
+    <p id="addResult"></p>
 
-  <script>
-    async function testDB() {
-      const res = await fetch('http://localhost:3001');
-      const data = await res.json();
-      alert('Database time: ' + JSON.stringify(data));
-    }
-  </script>
+  <hr />
+
+  <h1>Get OG Info</h1>
+    <input type="text" id="ogId" placeholder="Enter OG ID" />
+    <button onclick="fetchOG()">Fetch OG</button>
+    <p id="fetchResult"></p>
+
+  <script src="testscript.js"></script>
 </body>
 </html>
